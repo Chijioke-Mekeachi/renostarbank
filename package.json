@@ -2,7 +2,7 @@
   "name": "bank-backend",
   "version": "1.0.0",
   "description": "Bank application backend with Supabase",
-  "main": "server.js",
+  "main": "server.mjs",
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
