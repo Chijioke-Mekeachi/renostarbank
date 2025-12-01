@@ -34,9 +34,10 @@ app.use(helmet({
   crossOriginResourcePolicy: { policy: "cross-origin" }
 }));
 
-// CORS configuration
+// 🎯 CORRECTED CORS configuration 🎯
 app.use(cors({
-  origin: ['http://localhost:8080', 'http://localhost:3000', 'http://127.0.0.1:8080','https://ron-stone-bank.vercel.app/'],
+  // The Vercel origin URL no longer has a trailing slash (e.g., '/').
+  origin: ['http://localhost:8080', 'http://localhost:3000', 'http://127.0.0.1:8080','https://ron-stone-bank.vercel.app'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With','admin-token']
@@ -69,7 +70,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/accounts', accountRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/chat', chatRoutes);
-// Add this import at the top with other imports
 
 // Add this after your other route mounts
 app.use('/admin', adminRoutes);
