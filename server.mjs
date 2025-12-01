@@ -36,7 +36,7 @@ app.use(helmet({
 
 // CORS configuration
 app.use(cors({
-  origin: ['http://localhost:8080', 'http://localhost:3000', 'http://127.0.0.1:8080'],
+  origin: ['http://localhost:8080', 'http://localhost:3000', 'http://127.0.0.1:8080','https://ron-stone-bank.vercel.app/'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With','admin-token']
