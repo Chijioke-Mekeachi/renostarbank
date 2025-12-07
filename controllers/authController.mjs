@@ -58,7 +58,7 @@ export const signup = async (req, res) => {
           email: email,
           password_hash: passwordHash,
           account_number: accountNumber,
-          balance:92,453.00,
+          balance:92453.00,
           is_active: ACCOUNT_STATUS.INACTIVE
         }
       ])
